@@ -38,6 +38,7 @@ def serve():
     calculator_pb2_grpc.add_CalculatorServicer_to_server(Calculator(), server)
     server.add_insecure_port('[::]:50051')
     server.start()
+    print("Server started...")
     try:
         while True:
             time.sleep(_ONE_DAY_IN_SECONDS)

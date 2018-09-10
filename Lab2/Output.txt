@@ -1,0 +1,13 @@
+Server:
+
+C:\Users\admin\Desktop\GitHubRepo\CMPE273\Lab2>python c:/Users/admin/Desktop/GitHubRepo/CMPE273/Lab2/calculator_server.py
+Server started...
+
+Client:
+
+C:\Users\admin\Desktop\GitHubRepo\CMPE273\Lab2>python calculator_client.py
+Insert first number :
+10
+Insert second number :
+25
+Addition of 10 and 25 is : 35

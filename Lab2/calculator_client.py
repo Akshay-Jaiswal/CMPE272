@@ -27,10 +27,12 @@ def run():
     # of the code.
     with grpc.insecure_channel('localhost:50051') as channel:
         stub = calculator_pb2_grpc.CalculatorStub(channel)
-        response = stub.add(calculator_pb2.CalculationRequest(input1=1, input2=20))
-        print("Greeter client received: "+ str(response.result))
-        response = stub.add(calculator_pb2.CalculationRequest(input1=17, input2=2))
-        print("Greeter client received: "+ str(response.result))
-
+        print("Insert first number : ")
+        x=int(input())
+        print("Insert second number : ")
+        y=int(input())
+        response = stub.add(calculator_pb2.CalculationRequest(input1=x, input2=y))
+        print("Addition of "+str(x)+" and "+str(y)+" is : "+ str(response.result))
+    
 if __name__ == '__main__':
     run()
